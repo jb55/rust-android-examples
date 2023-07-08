@@ -33,3 +33,11 @@ crate_type=["cdylib"]
 path="src/lib.rs"
 name="agdk-eframe"
 required-features = [ "desktop" ]
+
+
+[patch.crates-io]
+winit = { git = "https://github.com/lucasmerlin/winit", branch = "v0.28.x_ime_support" }
+egui = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
+eframe = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
+egui-wgpu = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
+android-activity = { git = "https://github.com/lucasmerlin/android-activity", branch = "ime_support"}
