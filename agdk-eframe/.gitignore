@@ -1,5 +1,6 @@
 *.iml
 .gradle
+.direnv
 /local.properties
 /.idea
 .DS_Store
