@@ -8,12 +8,12 @@ resolver = "2"
 
 [dependencies]
 log = "0.4"
-winit = { version = "0.28", features = [ "android-game-activity" ] }
+winit = { version = "0.29", features = [ "android-game-activity" ] }
 wgpu = "0.16.0"
 pollster = "0.2"
-egui = "0.22"
-eframe = { version = "0.22", features = [ "wgpu", "android-game-activity" ] }
-egui_demo_lib = "0.22"
+egui = "0.26.2"
+eframe = { version = "0.26.2", features = [ "wgpu", "android-game-activity" ] }
+egui_demo_lib = "0.26.2"
 
 [target.'cfg(not(target_os = "android"))'.dependencies]
 env_logger = "0.10"
@@ -36,8 +36,9 @@ required-features = [ "desktop" ]
 
 
 [patch.crates-io]
-winit = { git = "https://github.com/lucasmerlin/winit", branch = "v0.28.x_ime_support" }
-egui = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
-eframe = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
-egui-wgpu = { git = "https://github.com/lucasmerlin/egui", branch = "mobile_ime_support"}
-android-activity = { git = "https://github.com/lucasmerlin/android-activity", branch = "ime_support"}
+winit = { git = "https://github.com/lucasmerlin/winit", branch = "hp-fixes-0.29.x" }
+egui = { git = "https://github.com/jb55/egui", branch = "ime_0.26.2"}
+eframe = { git = "https://github.com/jb55/egui", branch = "ime_0.26.2"}
+egui-wgpu = { git = "https://github.com/jb55/egui", branch = "ime_0.26.2"}
+egui-winit = { git = "https://github.com/jb55/egui", branch = "ime_0.26.2"}
+android-activity = { git = "https://github.com/jb55/android-activity", branch = "ime2"}
